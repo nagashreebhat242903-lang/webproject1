@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn more about Frontend Developer & Creative Designer divyabhat2622@gmail.com—focused on building modern web applications and engaging digital experiences." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Divya Bhatt Portfolio" />
+  <meta property="og:description" content="Learn more about Frontend Developer & Creative Designer divyabhat2622@gmail.com—focused on building modern web applications and engaging digital experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./about.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About — Divya Bhatt Portfolio" />
+  <meta name="twitter:description" content="Learn more about Frontend Developer & Creative Designer divyabhat2622@gmail.com—focused on building modern web applications and engaging digital experiences." />
+
+  <title>About — divyabhat2622@gmail.com</title>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Go to homepage">
+        <span class="brand__name">divyabhat2622@gmail.com</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" aria-current="page">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sr-only" aria-live="polite" id="page-context">About page</div>
+
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1" role="main">
+    <section class="page-hero" aria-labelledby="about-title">
+      <h1 id="about-title">About</h1>
+      <p class="hero__tagline">
+        Frontend Developer | Creative Designer passionate about building modern, responsive web applications and crafting engaging digital experiences with creativity and innovation
+      </p>
+    </section>
+
+    <section class="grid grid--2" aria-label="About content">
+      <article class="card" aria-labelledby="about-goals">
+        <h2 id="about-goals">What I do</h2>
+        <p>
+          I build user-friendly interfaces with semantic structure, accessible patterns, and performance-minded layouts.
+          I enjoy translating ideas into engaging web experiences.
+        </p>
+      </article>
+
+      <aside class="card" aria-labelledby="about-values">
+        <h2 id="about-values">Core values</h2>
+        <ul class="list">
+          <li>Accessibility-first UX</li>
+          <li>Semantic HTML5 and maintainable components</li>
+          <li>SEO-friendly structure and metadata</li>
+          <li>Clean, predictable design systems</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="cta" aria-labelledby="about-cta-title">
+      <h2 id="about-cta-title">Want to collaborate?</h2>
+      <p>Jump to the contact form and send a message.</p>
+      <a class="btn" href="./contact.html">Contact</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> divyabhat2622@gmail.com. All rights reserved.</p>
+      <p class="muted">Built with semantic HTML5 and WCAG-conscious accessibility.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

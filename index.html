@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Frontend Developer & Creative Designer passionate about building modern, responsive web applications and crafting engaging digital experiences." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Divya Bhatt Portfolio" />
+  <meta property="og:description" content="Frontend Developer & Creative Designer passionate about building modern, responsive web applications and crafting engaging digital experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./index.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Divya Bhatt Portfolio" />
+  <meta name="twitter:description" content="Frontend Developer & Creative Designer passionate about building modern, responsive web applications and crafting engaging digital experiences." />
+
+  <title>Divya Bhatt — Portfolio</title>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Go to homepage">
+        <span class="brand__name">divyabhat2622@gmail.com</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sr-only" aria-live="polite" id="page-context">Homepage</div>
+
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Frontend Developer &amp; Creative Designer</h1>
+      <p class="hero__tagline">
+        Frontend Developer | Creative Designer passionate about building modern, responsive web applications and crafting engaging digital experiences with creativity and innovation
+      </p>
+      <div class="hero__actions">
+        <a class="btn" href="./projects.html">View Projects</a>
+        <a class="btn btn--secondary" href="./contact.html">Contact Me</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="highlights-title" class="grid">
+      <h2 id="highlights-title">Highlights</h2>
+
+      <article class="card" aria-labelledby="feature-1">
+        <h3 id="feature-1">Accessible, Semantic UI</h3>
+        <p>Structured with modern HTML5 semantics and WCAG-friendly patterns.</p>
+      </article>
+
+      <article class="card" aria-labelledby="feature-2">
+        <h3 id="feature-2">Performance &amp; SEO</h3>
+        <p>SEO-ready meta tags and lightweight assets for fast-loading pages.</p>
+      </article>
+
+      <article class="card" aria-labelledby="feature-3">
+        <h3 id="feature-3">Clean Component Thinking</h3>
+        <p>Thoughtful layout, focus management, and reusable sections.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="cta-title" class="cta">
+      <h2 id="cta-title">Ready to build something great?</h2>
+      <p>Let’s connect—tab to the contact form and send a message.</p>
+      <a class="btn" href="./contact.html">Get in touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> divyabhat2622@gmail.com. All rights reserved.</p>
+      <p class="muted">Built with semantic HTML5 and WCAG-conscious accessibility.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Non-blocking, safe enhancement.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact divyabhat2622@gmail.com — accessibility-first web frontend development and creative UI design." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Divya Bhatt Portfolio" />
+  <meta property="og:description" content="Contact divyabhat2622@gmail.com — accessibility-first web frontend development and creative UI design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./contact.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact — Divya Bhatt Portfolio" />
+  <meta name="twitter:description" content="Contact divyabhat2622@gmail.com — accessibility-first web frontend development and creative UI design." />
+
+  <title>Contact — divyabhat2622@gmail.com</title>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Go to homepage">
+        <span class="brand__name">divyabhat2622@gmail.com</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sr-only" aria-live="polite" id="page-context">Contact page</div>
+
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1" role="main">
+    <section class="page-hero" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact</h1>
+      <p class="hero__tagline">Send a message. The form is fully keyboard and screen-reader friendly.</p>
+    </section>
+
+    <section class="grid grid--1" aria-label="Contact form section">
+      <article class="card">
+        <h2>Get in touch</h2>
+
+        <form class="form" action="#" method="post" novalidate aria-describedby="form-help">
+          <p id="form-help" class="muted">
+            All fields marked required must be filled. Errors are announced for screen readers.
+          </p>
+
+          <div class="form__row">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" />
+            <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required inputmode="email" maxlength="120" />
+            <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form__row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" autocomplete="off" maxlength="120" />
+          </div>
+
+          <div class="form__row">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required minlength="10" maxlength="1000" rows="6"></textarea>
+            <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn" type="submit">Send message</button>
+            <a class="btn btn--secondary" href="./index.html">Back to Home</a>
+          </div>
+
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </article>
+    </section>
+
+    <section class="cta" aria-labelledby="contact-cta-title">
+      <h2 id="contact-cta-title">Prefer email?</h2>
+      <p>
+        You can also email <a href="mailto:divyabhat2622@gmail.com">divyabhat2622@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> divyabhat2622@gmail.com. All rights reserved.</p>
+      <p class="muted">Built with semantic HTML5 and WCAG-conscious accessibility.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Accessible, non-blocking validation enhancement.
+    // The form uses novalidate to control messaging for screen readers.
+    (function () {
+      const form = document.querySelector('form');
+      const statusEl = document.getElementById('form-status');
+
+      const fields = [
+        { input: document.getElementById('name'), error: document.getElementById('name-error') },
+        { input: document.getElementById('email'), error: document.getElementById('email-error') },
+        { input: document.getElementById('message'), error: document.getElementById('message-error') },
+      ];
+
+      function clearErrors() {
+        statusEl.textContent = '';
+        for (const f of fields) {
+          f.error.textContent = '';
+          f.input.removeAttribute('aria-invalid');
+        }
+      }
+
+      function setError(input, errorEl, message) {
+        errorEl.textContent = message;
+        input.setAttribute('aria-invalid', 'true');
+      }
+
+      function validate() {
+        clearErrors();
+        let ok = true;
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        if (!name.value.trim() || name.value.trim().length < 2) {
+          setError(name, document.getElementById('name-error'), 'Please enter your name (at least 2 characters).');
+          ok = false;
+        }
+
+        if (!email.value.trim() || !email.checkValidity()) {
+          setError(email, document.getElementById('email-error'), 'Please enter a valid email address.');
+          ok = false;
+        }
+
+        if (!message.value.trim() || message.value.trim().length < 10) {
+          setError(message, document.getElementById('message-error'), 'Please enter a message (at least 10 characters).');
+          ok = false;
+        }
+
+        return ok;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const ok = validate();
+        if (ok) {
+          statusEl.textContent = 'Message ready to send (demo). In a real site, this would submit to a server.';
+          form.reset();
+        } else {
+          // Focus the first invalid input for better keyboard UX.
+          const firstInvalid = fields.find(f => f.input.getAttribute('aria-invalid') === 'true');
+          if (firstInvalid) firstInvalid.input.focus();
+        }
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
+

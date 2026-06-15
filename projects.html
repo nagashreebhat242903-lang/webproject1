@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore projects by divyabhat2622@gmail.com — modern responsive interfaces built with semantic HTML5, accessible patterns, and performance-minded design." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./projects.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects — Divya Bhatt Portfolio" />
+  <meta property="og:description" content="Explore projects by divyabhat2622@gmail.com — modern responsive interfaces built with semantic HTML5, accessible patterns, and performance-minded design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./projects.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Projects — Divya Bhatt Portfolio" />
+  <meta name="twitter:description" content="Explore projects by divyabhat2622@gmail.com — modern responsive interfaces built with semantic HTML5, accessible patterns, and performance-minded design." />
+
+  <title>Projects — divyabhat2622@gmail.com</title>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Go to homepage">
+        <span class="brand__name">divyabhat2622@gmail.com</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html" aria-current="page">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sr-only" aria-live="polite" id="page-context">Projects page</div>
+
+    </div>
+  </header>
+
+  <main id="main-content" class="container" tabindex="-1" role="main">
+    <section class="page-hero" aria-labelledby="projects-title">
+      <h1 id="projects-title">Projects</h1>
+      <p class="hero__tagline">
+        Selected work demonstrating semantic structure, accessibility, and modern UI implementation.
+      </p>
+    </section>
+
+    <section class="grid" aria-label="Project list">
+      <article class="card" aria-labelledby="proj-1">
+        <h2 id="proj-1">Portfolio Starter</h2>
+        <p class="muted">Accessible semantic layout template with WCAG-first components.</p>
+        <ul class="list">
+          <li>Semantic HTML5 landmarks</li>
+          <li>Keyboard-visible focus states</li>
+          <li>SEO-ready metadata</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="proj-2">
+        <h2 id="proj-2">Responsive Dashboard UI</h2>
+        <p class="muted">A responsive interface designed for performance and clarity.</p>
+        <ul class="list">
+          <li>Accessible navigation patterns</li>
+          <li>Readable color contrast choices</li>
+          <li>Lightweight styling approach</li>
+        </ul>
+      </article>
+
+      <article class="card" aria-labelledby="proj-3">
+        <h2 id="proj-3">Form Accessibility Kit</h2>
+        <p class="muted">Reusable accessible form patterns for better screen-reader UX.</p>
+        <ul class="list">
+          <li>Proper labeling &amp; descriptions</li>
+          <li>Non-visual error announcements</li>
+          <li>Tab order friendly structure</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="cta" aria-labelledby="projects-cta-title">
+      <h2 id="projects-cta-title">Want something similar?</h2>
+      <p>Use the contact form to tell me what you want to build.</p>
+      <a class="btn" href="./contact.html">Contact</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> divyabhat2622@gmail.com. All rights reserved.</p>
+      <p class="muted">Built with semantic HTML5 and WCAG-conscious accessibility.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
